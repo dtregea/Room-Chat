@@ -1,19 +1,17 @@
 # Room chat
-A javafx application which allows users to send messages to unique, joinable rooms
+A javafx application which allows users to send messages to unique, join-able rooms.
+- Built and tested on a windows operating system.
 
 ## Prerequisites
 
 - Java 15
 - JavaFX 11.0.2
 - Apache Derby 10.15
-- Windows
-
 
 ## How to set up (IntelliJ)
 1. Navigate to File/Project Structure/Project Settings/
-2. In /Libraries, add your javafx \bin folder with the '+'
-3. In /Modules, under the "Export | Scope" window, click '+', and select "JARS or Directories".
-4. Select the following from the derby lib\ folder: derby.jar, derbyclient.jar, derbytools.jar
+2. In /Libraries, click '+' select the \lib folder in your JavaFX directory.
+3. In /Modules, under the "Export | Scope" window, click '+', and select "JARS or Directories". Select the \lib folder in your apache derby directory.
 
 ## How to run
 1. Run Server.java
