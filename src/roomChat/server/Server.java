@@ -243,6 +243,8 @@ public class Server {
     public static Message registerUser(ClientHandler client, String username, String password) {
         if(isNameTaken(username))
             return new Message("Username already exists", Message.TYPE.LOGIN_DENIED);
+        if(password.length() < 8)
+            return new Message("Password must be at least 8 characters", Message.TYPE.LOGIN_DENIED);
         try {
             PreparedStatement createUser = connect.prepareStatement("INSERT INTO user_info VALUES(?,?,false)");
             createUser.setString(1, username);
