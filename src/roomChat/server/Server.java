@@ -75,7 +75,7 @@ public class Server {
             markAllUsersOffline();
             disconnectFromDatabase();
             System.exit(-1);
-        }else if(commandLine[0].equalsIgnoreCase("/ANNOUNCE")) {
+        }else if(commandLine[0].equalsIgnoreCase("/A")) {
             serverBroadcast(new Message(command.substring(3), Message.TYPE.SERVER_BROADCAST));
         }else if(commandLine[0].equalsIgnoreCase("/KICK")){
             try {
