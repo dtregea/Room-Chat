@@ -42,7 +42,6 @@ public class ClientChat extends Application {
     private static Stage stage;
     private static Scene chatScene;
     public static boolean connected = false;
-    // TODO dont run if cant connect to server
 
     public ClientChat(){
         try {
@@ -184,9 +183,10 @@ public class ClientChat extends Application {
                         changeRoom.setText("confirm");
                         send.setText("cancel");
                     }
+                } else {
+                    updateGUI(new Message("Usage: Type in room to enter, then press confirm\n"));
                 }
-            } else{
-            // When changing rooms, confirm
+            } else{ // When changing rooms, confirm
                 changeRoomConfirming = false;
                 changeRoom.setText("change room");
                 send.setText("send");
